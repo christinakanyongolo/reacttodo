@@ -32,10 +32,12 @@ h1{
   position: fixed; 
   top: 20px; 
   right: 20px;
+  cursor: pointer;
 }
 
 #theme-switch svg{ 
   fill: var(--text-color)
+
 }
 
 #theme-switch svg:last-child{

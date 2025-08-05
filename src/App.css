@@ -3,17 +3,21 @@
   --base-color: white; 
   --base-variant: #81f5da; 
   --text-color: black; 
-  --input-color: rgb(90, 110, 108) ;
+  --input-color: rgb(140, 157, 155) ;
 
 }
 
-#darkmode{
+.darkmode{
   --base-color: #037258; 
   --base-variant: black; 
   --text-color: white; 
   --input-color: rgb(23, 188, 157) ;
 
 
+}
+
+h1{
+  color: var(--text-color)
 }
 
 #theme-switch{ 
@@ -46,9 +50,6 @@
   display: block; 
 }
 
-
-
-
 body { 
   background: var(--base-color); 
   display: flex; 
@@ -56,6 +57,7 @@ body {
   align-items: center; 
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   width: 100%; 
+  color: var(--text-color)
 }
 
 .App{
@@ -63,10 +65,7 @@ body {
   width: 100%;
 }
 
-h1{
 
-  
-}
 .TodoWrapper{
   background: var(--base-variant);
   width: 100%;
@@ -74,6 +73,7 @@ h1{
   text-align: center;
   padding-top: 3px;
   padding-bottom: 20px; 
+  color: var(--text-color)
 
 }
 
@@ -82,7 +82,7 @@ h1{
   justify-content: center;
   align-items: center;
   background: var(--input-color);
-  color: var(--base-color);
+  color: var(--text-color);
   width: 70%;
   padding: 0px;
   margin-left: auto;
@@ -94,6 +94,7 @@ h1{
   .TodoForm {
     width: 100%; 
     margin-bottom: 1px; 
+    color: var(--text-color)
   }
 
   .TodoInput{
@@ -104,12 +105,12 @@ h1{
   margin-top: 10px;
   margin-bottom: 20px;
   width: 400px;
-  color: var(--text-color));
+  color: var(--text-color);
   }
 
   .TodoButton{
     background: var(--input-color); 
-    color: var(--base-color);
+    color: var(--text-color);
     padding: 11px; 
     cursor: pointer;
     border: none; 
@@ -122,11 +123,15 @@ h1{
     justify-content: space-between; 
     align-items: center; 
     padding: 10px 10px;
+    color: var(--text-color);
+    margin-top: 10px; 
+    margin-bottom: 10px;
+
   }
 
 .incompleted{ 
   cursor: pointer; 
-  color: var(--base-color); 
+  color: var(--text-color); 
 
 }
 .completed {

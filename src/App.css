@@ -1,43 +1,140 @@
-.App {
+
+:root{
+  --base-color: white; 
+  --base-variant: #81f5da; 
+  --text-color: black; 
+  --input-color: rgb(90, 110, 108) ;
+
+}
+
+#darkmode{
+  --base-color: #037258; 
+  --base-variant: black; 
+  --text-color: white; 
+  --input-color: rgb(23, 188, 157) ;
+
+
+}
+
+#theme-switch{ 
+  height: 50px;
+  width: 50px; 
+  padding: 0px; 
+  border-radius: 50%; 
+  background-color: var(--base-variant);
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  position: fixed; 
+  top: 20px; 
+  right: 20px;
+}
+
+#theme-switch svg{ 
+  fill: var(--text-color)
+}
+
+#theme-switch svg:last-child{
+  display:none; 
+}
+
+.darkmode #theme-switch svg:first-child{
+  display:none; 
+}
+
+.darkmode #theme-switch svg:last-child{
+  display: block; 
+}
+
+
+
+
+body { 
+  background: var(--base-color); 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 100%; 
+}
+
+.App{
   text-align: center;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1{
+
+  
+}
+.TodoWrapper{
+  background: var(--base-variant);
+  width: 100%;
+  margin: 5px 10px;
+  text-align: center;
+  padding-top: 3px;
+  padding-bottom: 20px; 
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  .Todo {
+  display: block;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background: var(--input-color);
+  color: var(--base-color);
+  width: 70%;
+  padding: 0px;
+  margin-left: auto;
+  margin-right: auto;
+
+
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .TodoForm {
+    width: 100%; 
+    margin-bottom: 1px; 
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
+  .TodoInput{
+  outline: none;
+  background: none;
+  border: 1px solid var(--input-color);
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 400px;
+  color: var(--text-color));
+  }
+
+  .TodoButton{
+    background: var(--input-color); 
+    color: var(--base-color);
+    padding: 11px; 
+    cursor: pointer;
+    border: none; 
+    border-radius: 0px; 
+
+  }
+
+  .Todo{
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 10px;
+  }
+
+.incompleted{ 
+  cursor: pointer; 
+  color: var(--base-color); 
+
+}
 .completed {
     text-decoration: line-through;
-    color: gray;
+    color: var(--text-color);
+}
+
+.edit-icon, .delete-icon{ 
+  cursor: pointer;
+  color: white;
 }

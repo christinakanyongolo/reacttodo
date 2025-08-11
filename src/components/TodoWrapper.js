@@ -33,7 +33,7 @@ const editTask = (task,id) => {
 }
 
     return ( 
-    <div className="TodoWrapper text-10xl"> 
+    <div className="TodoWrapper"> 
         <h1 className = "underline text-5xl">To-do List</h1>
         <TodoForm addTodo={addTodo} />
         {todos.map((todo, index) => {

@@ -20,7 +20,7 @@ function App() {
       </div>
       <button className = "absolute w-10 h-10 top-10 right-16 bg-black text-white dark:bg-white text-xl rounded-full" onClick={toggleDarkMode} >
         {darkMode ? ( 
-          <SunIcon className="w-10 h-10 text-yellow-500" />
+          <SunIcon className="flex justify:center w-10 h-10 text-yellow-500" />
         ):(
            <MoonIcon className="w-10 h-10 text-gray-200" />)}
       </button>

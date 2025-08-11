@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { Todo } from './Todo';
 import { EditTodoForm } from './EditTodoForm';
 import '../App.css';
+import {DragDropContext, Droppable, Draggable} from 'react-beautiful-dnd'; 
 uuidv4(); 
 
 
@@ -15,6 +16,8 @@ export const TodoWrapper = () => {
             console.log(todos)
             return todos;
     }
+
+
 
     const toggleComplete = id => { 
         setTodos(todos.map(todo => todo.id === id ? {...todo, completed: !todo.completed} : todo));
@@ -33,8 +36,9 @@ const editTask = (task,id) => {
 }
 
     return ( 
-    <div className="TodoWrapper bg-turquoise  dark:bg-darkturquoise"> 
-        <h1 className = "underline text-5xl text-black dark:text-gray-300">To-do List</h1>
+    <div className="TodoWrapper bg-turquoise  dark:bg-darkturquoise w-screen h-screen"> 
+        <div className= "w-50">
+        <h1 className = "text-5xl pt-10 text-black dark:text-gray-200">To-do List</h1>
         <TodoForm addTodo={addTodo} />
         {todos.map((todo, index) => {
             return todo.isEditing ? (
@@ -48,5 +52,6 @@ const editTask = (task,id) => {
                 />
             );
         })}
+        </div>
     </div>
 )};

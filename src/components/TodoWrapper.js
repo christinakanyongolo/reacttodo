@@ -3,7 +3,9 @@ import  {TodoForm} from './TodoForm';
 import { v4 as uuidv4 } from 'uuid';
 import { Todo } from './Todo';
 import { EditTodoForm } from './EditTodoForm';
+import '../App.css';
 uuidv4(); 
+
 
 export const TodoWrapper = () => {
         const [todos, setTodos] = useState([])
@@ -31,8 +33,8 @@ const editTask = (task,id) => {
 }
 
     return ( 
-    <div className="TodoWrapper"> 
-        <h1>To-do List</h1>
+    <div className="TodoWrapper text-10xl"> 
+        <h1 className = "underline text-5xl">To-do List</h1>
         <TodoForm addTodo={addTodo} />
         {todos.map((todo, index) => {
             return todo.isEditing ? (

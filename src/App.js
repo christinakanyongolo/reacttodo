@@ -8,7 +8,7 @@ import { EditTodoForm } from './components/EditTodoForm';
 function App() {
   return (
    <div>
-      <div className="App" >
+      <div className="App ">
     
         <TodoWrapper/>
       </div>

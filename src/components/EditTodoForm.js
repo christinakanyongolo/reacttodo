@@ -1,5 +1,6 @@
     import React, { useState } from 'react';
     import { TodoWrapper } from './TodoWrapper';
+    import '../App.css';
     
     export const EditTodoForm = ({ editTodo, task }) => {
         const [value, setValue] = useState(task.task);
@@ -13,9 +14,9 @@
         } 
     
         return(   
-                <form className ="TodoForm" onSubmit = {handleSubmit}>
-                    <input type = "text"  className ="TodoInput" placeholder= "Edit Task"  value = {value} onChange = {(e) => setValue(e.target.value)}/>
-                    <button type="submit" className="TodoButton">Update Task</button>
+                <form className ="TodoForm text-xl" onSubmit = {handleSubmit}>
+                    <input type = "text" className ="TodoInput bg-gray-300 text-xl" placeholder= "Edit Task..."  value = {value} onChange = {(e) => setValue(e.target.value)}/>
+                    <button type="submit" className="TodoButton bg-gray-600 text-gray-300 text-xl hover:bg-gray-500">Update Task</button>
                 </form>
     
         )}

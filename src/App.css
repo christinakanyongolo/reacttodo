@@ -24,37 +24,6 @@ h1{
   border: 2px var(--text-color);
 }
 
-#theme-switch{ 
-  height: 50px;
-  width: 50px; 
-  padding: 0px; 
-  border-radius: 50%; 
-  background-color: var(--base-variant);
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  position: fixed; 
-  top: 20px; 
-  right: 20px;
-  cursor: pointer;
-}
-
-#theme-switch svg{ 
-  fill: var(--text-color)
-
-}
-
-#theme-switch svg:last-child{
-  display:none; 
-}
-
-.darkmode #theme-switch svg:first-child{
-  display:none; 
-}
-
-.darkmode #theme-switch svg:last-child{
-  display: block; 
-}
 
 body { 
   background: var(--base-color); 

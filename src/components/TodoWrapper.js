@@ -34,7 +34,7 @@ const editTask = (task,id) => {
 
     return ( 
     <div className="TodoWrapper bg-turquoise  dark:bg-darkturquoise"> 
-        <h1 className = "underline text-5xl">To-do List</h1>
+        <h1 className = "underline text-5xl text-black dark:text-gray-300">To-do List</h1>
         <TodoForm addTodo={addTodo} />
         {todos.map((todo, index) => {
             return todo.isEditing ? (

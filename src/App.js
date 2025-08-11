@@ -1,5 +1,6 @@
 import './App.css';
 import React, {useState}from 'react';
+import { SunIcon, MoonIcon } from '@heroicons/react/24/solid';
 import { TodoWrapper } from './components/TodoWrapper';
 import { TodoForm } from './components/TodoForm';
 import { EditTodoForm } from './components/EditTodoForm';
@@ -17,8 +18,11 @@ function App() {
     
         <TodoWrapper/>
       </div>
-      <button className = "absolute w-16 h-18 bottom-16 right-16 bg-black text-white dark:bg-white" onClick={toggleDarkMode} >
-        {darkMode ? "light": "dark"}
+      <button className = "absolute w-10 h-10 top-10 right-16 bg-black text-white dark:bg-white text-xl rounded-full" onClick={toggleDarkMode} >
+        {darkMode ? ( 
+          <SunIcon className="w-10 h-10 text-yellow-500" />
+        ):(
+           <MoonIcon className="w-10 h-10 text-gray-200" />)}
       </button>
     </div>
   );

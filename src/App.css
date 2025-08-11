@@ -1,4 +1,7 @@
 
+*{
+  @apply transition-colors duration-300
+}
 :root{
   --base-color: #ebe9e9f7; 
   --base-variant: #2fdab2; 

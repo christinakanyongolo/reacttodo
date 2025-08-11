@@ -16,7 +16,7 @@
         return(   
                 <form className ="TodoForm text-xl" onSubmit = {handleSubmit}>
                     <input type = "text" className ="TodoInput bg-gray-300 text-xl" placeholder= "Edit Task..."  value = {value} onChange = {(e) => setValue(e.target.value)}/>
-                    <button type="submit" className="TodoButton bg-gray-600 text-gray-300 text-xl hover:bg-gray-500">Update Task</button>
+                    <button type="submit" className="TodoButton bg-gray-600 text-gray-300 text-xl hover:bg-gray-500 transform transition-transform duration-300 hover:scale-95">Update Task</button>
                 </form>
     
         )}
